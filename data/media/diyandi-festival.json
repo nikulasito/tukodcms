@@ -1,0 +1,40 @@
+{
+    "tenant": "diyandi-festival",
+    "updatedAt": "2026-07-20T10:38:51+00:00",
+    "assets": [
+        {
+            "id": "asset-20260720103851-95fba6",
+            "name": "images.jpg",
+            "fileName": "images-20260720103851-6832ee.jpg",
+            "url": "http://cms.local/uploads/diyandi-festival/2026/07/images-20260720103851-6832ee.jpg",
+            "mime": "image/jpeg",
+            "size": 11693,
+            "alt": "Images",
+            "meta": "Image · 11.4 KB · uploaded Jul 20, 2026",
+            "tags": [
+                "#Upload",
+                "#Image"
+            ],
+            "style": "festival",
+            "uploadedAt": "2026-07-20T10:38:51+00:00",
+            "uploadedBy": "editor_302"
+        },
+        {
+            "id": "asset-20260720063803-5f106c",
+            "name": "pexels-michael-tuszynski-1134777-2157401.jpg",
+            "fileName": "pexels-michael-tuszynski-1134777-2157401-20260720063803-dfdf08.jpg",
+            "url": "http://cms.local/uploads/diyandi-festival/2026/07/pexels-michael-tuszynski-1134777-2157401-20260720063803-dfdf08.jpg",
+            "mime": "image/jpeg",
+            "size": 5526951,
+            "alt": "Pexels Michael Tuszynski 1134777 2157401",
+            "meta": "Image · 5.27 MB · uploaded Jul 20, 2026",
+            "tags": [
+                "#Upload",
+                "#Image"
+            ],
+            "style": "festival",
+            "uploadedAt": "2026-07-20T06:38:03+00:00",
+            "uploadedBy": "editor_302"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route every CMS event permalink through the dedicated event renderer.
+  RewriteRule ^events/([A-Za-z0-9-]+)/?$ events/view/index.html [L]
+
+  RewriteRule ^cms-page/?$ cms-page/index.html [L]
+  RewriteRule . cms-page/index.html [L]
+</IfModule>

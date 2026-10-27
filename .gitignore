@@ -1,0 +1,12 @@
+# Local and production credentials
+/config.local.php
+/config/database.php
+/.vscode/sftp.json
+
+# User uploads and generated/runtime data
+/uploads/
+
+# Local tooling and OS files
+/.git/
+/.DS_Store
+Thumbs.db

@@ -1,0 +1,3 @@
+<FilesMatch "\.(php|env|ini|json)$">
+    Require all denied
+</FilesMatch>

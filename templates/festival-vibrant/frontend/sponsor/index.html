@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Higalaay Festival partner tiers and official partner logos for Cagayan de Oro's annual celebration."
+    />
+    <title>Be a Partner | Higalaay Festival</title>
+    <link rel="icon" href="../assets/higalaay_logo.png" type="image/png" />
+    <link rel="stylesheet" href="../assets/styles.css?v=20260806-1" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Higalaay Festival home">
+        <img
+          class="brand-logo"
+          src="../assets/higalaay_logo.png"
+          alt="Higalaay Festival"
+        />
+        <span>
+          <strong>Higalaay Festival</strong>
+          <small>Cagayan de Oro</small>
+        </span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../">Home</a>
+        <a href="../about/">About Higalaay</a>
+        <a href="../events/">Events</a>
+        <a href="../sponsor/" aria-current="page">Be a Partner</a>
+        <a href="../contact/">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <div data-tukod-slot-anchor="sponsor-hero" hidden></div>
+
+      <div data-tukod-slot-anchor="platinum-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="diamond-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="gold-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="silver-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="bronze-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="donors-tier" hidden></div>
+
+      <div data-tukod-slot-anchor="sponsor-cta" hidden></div>
+    </main>
+
+    <div class="modal-shell" id="partner-modal" aria-hidden="true">
+      <div class="modal-backdrop" data-modal-close></div>
+      <section
+        class="partner-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="partner-modal-title"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          aria-label="Close partner form"
+          data-modal-close
+        >
+          <span></span>
+          <span></span>
+        </button>
+        <div class="modal-copy">
+          <p class="eyebrow">Partnership Inquiry</p>
+          <h2 id="partner-modal-title">
+            Tell us about your partnership interest
+          </h2>
+          <p>
+            Share your contact details and a short message so the Higalaay team
+            can follow up with the right partnership information.
+          </p>
+        </div>
+        <form class="partner-form">
+          <div class="form-grid">
+            <label>
+              Name
+              <input
+                type="text"
+                name="first_name"
+                autocomplete="given-name"
+                required
+              />
+            </label>
+            <label>
+              Last name
+              <input
+                type="text"
+                name="last_name"
+                autocomplete="family-name"
+                required
+              />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" autocomplete="tel" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+            <label>
+              Company
+              <input
+                type="text"
+                name="company"
+                autocomplete="organization"
+                required
+              />
+            </label>
+            <label>
+              Role
+              <input
+                type="text"
+                name="role"
+                autocomplete="organization-title"
+              />
+            </label>
+            <label class="full-field">
+              Message
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell us what partnership package or visibility you are interested in."
+              ></textarea>
+            </label>
+          </div>
+          <div class="modal-actions">
+            <button class="button primary" type="submit">
+              Submit Interest
+            </button>
+            <a
+              class="button secondary"
+              href="assets/Higalaay-Partner-Guide.txt"
+              download
+            >
+              Download Partner Guide
+            </a>
+          </div>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
+
+    <footer class="site-footer" data-tukod-global-footer hidden></footer>
+
+    <script src="../assets/main.js?v=20260806-1"></script>
+    <script src="../cms-config.js?v=20260806-1"></script>
+    <script src="../tukod-cms-client.js?v=20260806-1" defer></script>
+  </body>
+</html>

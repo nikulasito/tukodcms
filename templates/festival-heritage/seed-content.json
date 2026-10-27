@@ -1,0 +1,98 @@
+{
+  "records": [
+    {
+      "key": "site-settings",
+      "type": "site-settings",
+      "route": "/",
+      "status": "draft",
+      "fields": {
+        "festivalName": "Festival Name",
+        "tagline": "Celebrate culture, community, and tradition.",
+        "location": "Festival City",
+        "logo": ""
+      }
+    },
+    {
+      "key": "home-hero",
+      "type": "page-section",
+      "route": "/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "hero",
+        "eyebrow": "Welcome to",
+        "heading": "Festival Name",
+        "summary": "Discover a celebration of culture, friendship, creativity, and community.",
+        "image": ""
+      }
+    },
+    {
+      "key": "home-hero-gallery",
+      "type": "page-section",
+      "route": "/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "hero-gallery",
+        "eyebrow": "",
+        "heading": "",
+        "summary": "",
+        "image": "",
+        "widgetConfig": ""
+      }
+    },
+    {
+      "key": "home-countdown",
+      "type": "page-section",
+      "route": "/",
+      "status": "draft",
+      "fields": {
+        "heading": "Until opening day",
+        "eventDate": "",
+        "hideCountdown": false
+      }
+    },
+    {
+      "key": "home-about",
+      "type": "page-section",
+      "route": "/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "about",
+        "heading": "About the Festival",
+        "summary": "Introduce the history and significance of your festival."
+      }
+    },
+    {
+      "key": "about-hero",
+      "type": "page-section",
+      "route": "/about/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "hero",
+        "heading": "Our Festival Story",
+        "summary": "Share the history, people, and traditions behind the celebration."
+      }
+    },
+    {
+      "key": "events-hero",
+      "type": "page-section",
+      "route": "/events/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "hero",
+        "heading": "Festival Events",
+        "summary": "Explore activities and celebrations happening throughout the festival."
+      }
+    },
+    {
+      "key": "contact-hero",
+      "type": "page-section",
+      "route": "/contact/",
+      "status": "draft",
+      "fields": {
+        "contentCategory": "hero",
+        "heading": "Contact the Festival Team",
+        "summary": "Reach out for festival inquiries, partnerships, and assistance."
+      }
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "portals": [
+    {
+      "id": "diyandi-festival",
+      "name": "Diyandi Festival",
+      "cmsPath": "diyandi",
+      "domain": "https://diyandi.tukodph.com/",
+      "short": "DF",
+      "kind": "government",
+      "status": "live",
+      "color": "#176b68",
+      "users": 1,
+      "content": 32,
+      "uptime": "Local preview",
+      "articles": 32,
+      "integrated": true,
+      "previewUrl": "https://diyandi.tukodph.com/",
+      "templateId": "festival-heritage",
+      "templateName": "Heritage Festival",
+      "structureVersion": "festival-site-v1",
+      "implementationFamily": "standard-festival-site"
+    },
+    {
+      "id": "higalaay-festival",
+      "name": "Higalaay Festival",
+      "cmsPath": "higalaay",
+      "domain": "https://higalaayfestival.com/",
+      "short": "HF",
+      "kind": "government",
+      "status": "live",
+      "color": "#0d8f91",
+      "users": 1,
+      "content": 12,
+      "uptime": "Local preview",
+      "articles": 12,
+      "integrated": true,
+      "previewUrl": "https://higalaayfestival.com/",
+      "templateId": "festival-vibrant",
+      "templateName": "Vibrant Festival",
+      "structureVersion": "festival-site-v1",
+      "implementationFamily": "standard-festival-site"
+    }
+  ]
+}

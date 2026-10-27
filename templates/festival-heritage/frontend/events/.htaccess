@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Keep existing static event folders and files working normally.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Any new CMS event slug uses the generic dynamic detail page.
+RewriteRule ^([A-Za-z0-9-]+)/?$ view/index.html [L]

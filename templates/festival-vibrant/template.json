@@ -1,0 +1,46 @@
+{
+  "id": "festival-vibrant",
+  "name": "Vibrant Festival",
+  "description": "A bold, high-energy festival layout for parades, nightlife, and citywide celebrations.",
+  "version": "1.0.0",
+  "preview": "preview.jpg",
+  "frontendPath": "frontend",
+  "legacyReferencePath": "frontend",
+  "seedContentPath": "seed-content.json",
+  "scaffoldPath": "frontend",
+  "implementationFamily": "standard-festival-site",
+  "structureVersion": "festival-site-v1",
+  "isGeneric": true,
+  "designTone": "Expressive color, energetic rhythm, and large-format showcase moments.",
+  "palette": ["#f26a2e", "#ffd54d", "#0d8f91"],
+  "supportedContentTypes": [
+    "page-section",
+    "festival-event",
+    "announcement",
+    "gallery",
+    "sponsor"
+  ],
+  "siteWidgets": {
+    "enabled": true,
+    "countdownEnabled": true,
+    "supportedTypes": [
+      "hero",
+      "faq-list",
+      "ticker-band",
+      "post",
+      "cta",
+      "contact-form",
+      "featured-image",
+      "event",
+      "sponsor-list",
+      "featured",
+      "partner-recognition",
+      "about",
+      "story",
+      "value-strip",
+      "explore",
+      "visit-band",
+      "calendar-of-events"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/events/:slug",
+      "destination": "/events/view/index.html"
+    },
+    {
+      "source": "/events/:slug/",
+      "destination": "/events/view/index.html"
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Higalaay Festival event details." />
+    <title>Event | Higalaay Festival</title>
+    <link rel="icon" href="../../assets/higalaay_logo.png" type="image/png" />
+    <link rel="stylesheet" href="../../assets/styles.css?v=20260806-1" />
+    <style>
+      [hidden] {
+        display: none !important;
+      }
+
+      .event-detail-status {
+        min-height: 55vh;
+        padding: clamp(7rem, 12vw, 11rem) clamp(1.25rem, 5vw, 5rem);
+      }
+
+      .event-detail-status > div {
+        max-width: 760px;
+      }
+
+      .event-detail-status h1 {
+        margin-bottom: 1rem;
+      }
+
+      .event-detail-media {
+        margin-top: 2rem;
+      }
+
+      .event-detail-media img {
+        display: block;
+        width: 100%;
+        max-height: 620px;
+        object-fit: cover;
+      }
+
+      [data-event-presenter] {
+        display: block;
+        margin-top: 24px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        color: #fff;
+      }
+
+      [data-event-presenter] .event-presenter-label {
+        display: block;
+        margin-bottom: 12px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 0.72rem;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+      }
+
+      .event-presenter-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        width: 100%;
+        min-height: 84px;
+        padding: 14px 20px;
+        border-radius: 10px;
+        background: #fff;
+      }
+
+      .event-presenter-logo img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        max-height: 56px;
+        padding: 0;
+        background: transparent;
+        object-fit: contain;
+      }
+
+      .event-presenter-logo span {
+        color: var(--navy);
+        font-weight: 850;
+        text-align: center;
+      }
+
+      .event-editorial-grid {
+        overflow: hidden;
+        border: 1px solid rgba(15, 31, 55, 0.12);
+        border-radius: var(--radius);
+        background: #f8f5ef;
+        box-shadow: var(--shadow);
+      }
+
+      .event-editorial-item {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        min-height: 360px;
+      }
+
+      .event-editorial-item + .event-editorial-item {
+        border-top: 1px solid rgba(15, 31, 55, 0.12);
+      }
+
+      .event-editorial-item figure {
+        min-height: 360px;
+        margin: 0;
+        background: #ddd5c8;
+      }
+
+      .event-editorial-item img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        object-fit: cover;
+      }
+
+      .event-editorial-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: clamp(34px, 5vw, 72px);
+      }
+
+      .event-editorial-copy h2 {
+        max-width: 12ch;
+        margin: 8px 0 14px;
+        font-size: clamp(2.4rem, 5vw, 4.6rem);
+        line-height: 0.95;
+      }
+
+      .event-editorial-copy p:last-child {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .event-editorial-item.is-reversed figure {
+        order: 2;
+      }
+
+      .event-editorial-item.is-text-only {
+        grid-template-columns: 1fr;
+      }
+
+      .event-location-section {
+        padding: clamp(28px, 5vw, 46px);
+        background: #f5f5f5;
+      }
+
+      .event-location-shell {
+        display: grid;
+        grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+        gap: clamp(20px, 4vw, 34px);
+        max-width: 1180px;
+        margin: 0 auto;
+        align-items: stretch;
+      }
+
+      .event-location-frame {
+        overflow: hidden;
+        min-height: 360px;
+        border: 1px solid rgba(15, 31, 55, 0.12);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .event-location-frame iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 360px;
+        border: 0;
+      }
+
+      .event-location-card {
+        display: grid;
+        gap: 18px;
+        align-content: start;
+        padding: clamp(26px, 4vw, 34px);
+        background: #fff;
+        border: 1px solid rgba(15, 31, 55, 0.12);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .event-location-card h2 {
+        font-size: clamp(2rem, 4vw, 3.1rem);
+      }
+
+      .event-location-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .event-location-venue {
+        color: var(--navy);
+        font-size: 1.08rem;
+        font-weight: 850;
+      }
+
+      [data-event-category] {
+        display: block;
+        margin-top: 6px;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.72rem;
+        font-weight: 800;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+
+      @media (max-width: 760px) {
+        .event-location-shell {
+          grid-template-columns: 1fr;
+        }
+
+        .event-editorial-item {
+          grid-template-columns: 1fr;
+        }
+
+        .event-editorial-item.is-reversed figure {
+          order: 0;
+        }
+      }
+
+      .tukod-event-detail-body > :first-child {
+        margin-top: 0;
+      }
+
+      .tukod-event-detail-body > :last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../../" aria-label="Higalaay Festival home">
+        <img
+          class="brand-logo"
+          src="../../assets/higalaay_logo.png"
+          alt="Higalaay Festival"
+        />
+        <span>
+          <strong>Higalaay Festival</strong>
+          <small>Cagayan de Oro</small>
+        </span>
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="../../">Home</a>
+        <a href="../../about/">About Higalaay</a>
+        <a href="../../events/" aria-current="page">Events</a>
+        <a href="../../sponsor/">Be a Partner</a>
+        <a href="../../contact/">Contact Us</a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        class="event-detail-status"
+        data-tukod-event-loading
+        aria-live="polite"
+      >
+        <div>
+          <p class="eyebrow">Festival event</p>
+          <h1>Loading event details...</h1>
+          <p>Retrieving the latest published information from the CMS.</p>
+        </div>
+      </section>
+
+      <section class="event-detail-status" data-tukod-event-error hidden>
+        <div>
+          <p class="eyebrow">Event unavailable</p>
+          <h1>This event could not be found.</h1>
+          <p>
+            It may be offline or not yet published. Return to the complete event
+            listing for other festival activities.
+          </p>
+          <a class="button primary" href="../">Back to events</a>
+        </div>
+      </section>
+
+      <article data-tukod-event-detail hidden>
+        <section class="event-detail-hero">
+          <div class="event-detail-inner">
+            <a class="back-link" href="../">Back to events</a>
+            <p class="eyebrow" data-event-eyebrow>Festival event</p>
+            <h1 data-event-title>Event title</h1>
+            <p data-event-summary>Event summary</p>
+            <div class="event-hero-meta" aria-label="Event quick facts">
+              <span
+                ><strong>Date</strong><small data-event-date>TBA</small
+                ><small data-event-category hidden>Event category</small></span
+              >
+              <span
+                ><strong>Time</strong><small data-event-time>TBA</small></span
+              >
+              <span
+                ><strong>Venue</strong><small data-event-venue>TBA</small></span
+              >
+            </div>
+          </div>
+          <span class="event-hero-credit" data-event-image-credit hidden></span>
+        </section>
+        <section
+          class="section event-location-section"
+          data-event-map-section
+          hidden
+        >
+          <div class="event-location-shell">
+            <div class="event-location-frame" data-event-map-frame></div>
+            <aside class="event-location-card">
+              <div>
+                <p class="eyebrow">Find the venue</p>
+                <h2>Event map</h2>
+              </div>
+              <p class="event-location-venue" data-event-map-venue>
+                Venue to be announced
+              </p>
+              <p data-event-map-caption>
+                Check the venue location before you go.
+              </p>
+              <a
+                class="button primary"
+                data-event-map-link
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open in Maps</a
+              >
+            </aside>
+          </div>
+        </section>
+        <div data-tukod-slot-anchor="events-partner-recognition" hidden></div>
+
+        <section class="section event-overview" data-event-overview hidden>
+          <div class="event-overview-copy" data-event-expect hidden>
+            <p class="eyebrow">What to expect</p>
+            <h2 data-event-expect-title></h2>
+            <p data-event-expect-summary></p>
+          </div>
+          <aside class="event-info-card" data-event-quick hidden>
+            <h2>Quick Details</h2>
+            <ul data-event-quick-list></ul>
+            <div data-event-presenter hidden></div>
+          </aside>
+        </section>
+
+        <section class="section" data-event-editorial hidden>
+          <div class="event-editorial-grid" data-event-editorial-grid></div>
+        </section>
+
+        <section class="section more-festival-events-section">
+          <div class="section-heading">
+            <p class="eyebrow">Keep exploring</p>
+            <h2>More festival events</h2>
+          </div>
+          <div class="event-grid" data-event-related></div>
+        </section>
+      </article>
+    </main>
+
+    <div data-tukod-slot-anchor="event-faqs" hidden></div>
+    <footer class="site-footer" data-tukod-global-footer hidden></footer>
+
+    <script src="../../assets/main.js?v=20260806-1"></script>
+    <script src="../../cms-config.js?v=20260806-1"></script>
+    <script src="../../tukod-cms-client.js?v=20260806-1" defer></script>
+  </body>
+</html>
